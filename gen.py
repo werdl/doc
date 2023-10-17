@@ -39,6 +39,13 @@ global_symbols = settings
 classes = [symbol for symbol in global_symbols.values() if inspect.isclass(symbol)]
 for obj in classes:
     members = inspect.getmembers(obj, predicate=inspect.isfunction)
+    flush(f"""
+---
+
+## `{obj.__name__}`
+{strip_lines(obj.__doc__)}
+
+---""",FILE)
     for method in members:
         m=method[1]
         source=inspect.getsource(m)

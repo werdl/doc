@@ -1,4 +1,16 @@
 
+---
+
+## `ntp`
+
+A class for dealing with NTP requests. It also provides methods forformatting dates according to both the MM-DD-YYYY HH:MM:SS and ISO8601
+formats. It can deal with local timezones and has no external depenencies.
+In the henceforth documentation, MM-DD-YYYY HH:MM:SS will be referred toas 'UTC format'.
+Also, P%Y-%m-%dT%H:%M:%S%z will be known as ISO8601.
+I am aware there are different variants, this is this project's one.
+
+
+---
 ### `ntp.__init__(self, server: str = 'ptbtime1.ptb.de') -> None:`
 #### Description
 
@@ -47,7 +59,7 @@ Quick access ISO8601 formatted date, offset in hours
 #### Arguments:
 `offset_hour`: float - UTC offset in hours (can be float)        
 
----``
+---
 ### `ntp.local_iso8601() -> str:`
 #### Description
 
