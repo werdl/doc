@@ -47,7 +47,7 @@ Quick access ISO8601 formatted date, offset in hours
 #### Arguments:
 `offset_hour`: float - UTC offset in hours (can be float)        
 
----
+---``
 ### `ntp.local_iso8601() -> str:`
 #### Description
 
